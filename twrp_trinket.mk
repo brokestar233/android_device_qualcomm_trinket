@@ -5,18 +5,23 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+# Configure base.mk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
-# Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+# Configure core_64_bit_only.mk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+
+# Configure twrp common.mk
+$(call inherit-product, vendor/twrp/config/common.mk)
+
+# Configure full_base_telephony.mk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from trinket device
 $(call inherit-product, device/qualcomm/trinket/device.mk)
 
 PRODUCT_DEVICE := trinket
-PRODUCT_NAME := omni_trinket
+PRODUCT_NAME := twrp_trinket
 PRODUCT_BRAND := qti
 PRODUCT_MODEL := S2
 PRODUCT_MANUFACTURER := qualcomm

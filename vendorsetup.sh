@@ -5,6 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-add_lunch_combo omni_trinket-user
-add_lunch_combo omni_trinket-userdebug
-add_lunch_combo omni_trinket-eng
+# add_lunch_combo is obsolete. Use COMMON_LUNCH_CHOICES in your AndroidProducts.mk instead.
+# add_lunch_combo twrp_trinket-user
+# add_lunch_combo twrp_trinket-userdebug
+# add_lunch_combo twrp_trinket-eng

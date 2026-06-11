@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_trinket.mk
+    $(LOCAL_DIR)/twrp_trinket.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_trinket-user \
-    omni_trinket-userdebug \
-    omni_trinket-eng
+    twrp_trinket-user \
+    twrp_trinket-userdebug \
+    twrp_trinket-eng

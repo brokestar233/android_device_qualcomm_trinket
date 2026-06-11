@@ -19,13 +19,8 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-service
 
 PRODUCT_PACKAGES += \
-    bootctrl.trinket
-
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     bootctrl.trinket \
-    libgptutils \
-    libz \
-    libcutils
+    bootctrl.trinket.recovery
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
@@ -33,3 +28,6 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_verifier \
     update_engine_sideload
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
